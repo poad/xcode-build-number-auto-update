@@ -1,5 +1,5 @@
 import * as core from "@actions/core";
-import * as updateBundle from "./bundleNumber";
+import * as bundleNumber from "./bundleNumber";
 
 function run(): void {
   try {
@@ -16,10 +16,10 @@ function run(): void {
       }
       nextNumber = newNumber;
     } else {
-      nextNumber = updateBundle.get(path);
+      nextNumber = bundleNumber.get(path);
     }
     core.info(`Update to ${nextNumber}`);
-    updateBundle.update(path, nextNumber);
+    bundleNumber.update(path, nextNumber);
 
     core.setOutput("dest-number", newNumber);
   } catch (error) {
