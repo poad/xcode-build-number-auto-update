@@ -1,0 +1,19 @@
+name: 'Xcode build number auto update'
+description: 'Automatically update the build number(bundle number) for Xcode project.'
+author: 'poad <ken-yo@mbr.nifty.com>'
+branding:
+  icon: 'terminal'
+  color: 'yellow'
+inputs:
+  path:
+    description: 'Path of Info.plist'
+    required: true
+  new-number:
+    description: 'New build number. When auto_increment is set to true, new_number cannot be specified.'
+    required: false
+  auto-increment:
+    description: 'auto increment build number. If new_number is specified, auto_increment cannot be set to true.'
+    required: false
+runs:
+  using: 'node12'
+  main: 'dist/main.js'
