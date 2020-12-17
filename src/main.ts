@@ -1,5 +1,7 @@
-import * as core from "@actions/core";
-import * as bundleNumber from "./bundleNumber";
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const core = require("@actions/core");
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const bundleNumber = require("./bundleNumber");
 
 function run(): void {
   try {

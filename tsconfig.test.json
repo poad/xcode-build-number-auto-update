@@ -1,7 +1,0 @@
-{
-  "extends": "./tsconfig.json",
-  "target": "ES3",
-  "module": "commonjs",
-  "include": ["**/*.test.ts"],
-  "exclude": ["node_modules", "dist"]
-}

@@ -5,16 +5,15 @@ module.exports = {
   testMatch: ['**/tests/*.test.ts'],
   testRunner: 'jest-circus/runner',
   transform: {
+    '^.+\\.ts$': 'ts-jest'
   },
   modulePaths: [
-    "<rootDir>/bin",
     "<rootDir>/dist",
-    "<rootDir>/node_modules",
-    "<rootDir>/node_modules/*"
+    "<rootDir>/node_modules"
   ],
   globals: {
     "ts-jest": {
-      tsconfig: "tsconfig.test.json"
+      tsconfig: "tsconfig.json"
     }
   },
   verbose: true
