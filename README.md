@@ -7,7 +7,7 @@ Update the Bundle Number (build number) auto update action.
 ### Set the run number of GitHub Action 
 ```
 - name: Xcode build number auto update
-  uses: poad/xcode-build-number-auto-update@1.0.0
+  uses: poad/xcode-build-number-auto-update@v1
   with:
       path: ./your_project/Info.plist
       new-number: ${{ github.run_number }}
@@ -16,7 +16,7 @@ Update the Bundle Number (build number) auto update action.
 ### Set the Timestamp of GitHub Action 
 ```
 - name: Xcode build number auto update
-  uses: poad/xcode-build-number-auto-update@1.0.0
+  uses: poad/xcode-build-number-auto-update@v1
   with:
       path: ./your_project/Info.plist
       new-number: $(date +%Y%m%d%H%M%S)
@@ -25,7 +25,7 @@ Update the Bundle Number (build number) auto update action.
 ### Auto Increment by GitHub Action 
 ```
 - name: Xcode build number auto update
-  uses: poad/xcode-build-number-auto-update@1.0.0
+  uses: poad/xcode-build-number-auto-update@v1
   with:
       path: ./your_project/Info.plist
       auto-increment: true
