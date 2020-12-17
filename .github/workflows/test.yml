@@ -35,12 +35,13 @@ jobs:
 
       - name: Build and lint
         run: |
+          yarn install
           yarn build
           yarn lint
 
       - name: Set Xcode version
         run: sudo xcode-select -switch /Applications/Xcode_12.3.app/
-
+      
       - name: Test case 1
         uses: ./
         with:
@@ -49,7 +50,7 @@ jobs:
 
       - name: Test case 1 assertion
         run: |
-          CURRENT=$(PlistBuddy -c "Print CFBundleVersion" ./test-project/XcodeBundleNumber/XcodeBundleNumber/Info.plist)
+          CURRENT=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" ./test-project/XcodeBundleNumber/XcodeBundleNumber/Info.plist)
           if [ ${CURRENT} != ${{ github.run_number }} ]; then
             echo "Expects: ${{ github.run_number }} Actual: ${CURRENT}"
             exit 1
@@ -64,7 +65,7 @@ jobs:
       - name: Test case 2 assertion
         run: |
           EXPECTS=$(echo "${{ github.run_number }}+1" | bc)
-          CURRENT=$(PlistBuddy -c "Print CFBundleVersion" ./test-project/XcodeBundleNumber/XcodeBundleNumber/Info.plist)
+          CURRENT=$(/usr/libexec/PlistBuddy -c "Print CFBundleVersion" ./test-project/XcodeBundleNumber/XcodeBundleNumber/Info.plist)
           if [ ${CURRENT} != ${EXPECTS} ]; then
             echo "Expects: ${EXPECTS} Actual: ${CURRENT}"
             exit 1

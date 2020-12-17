@@ -16,7 +16,8 @@ function run(): void {
       }
       nextNumber = newNumber;
     } else {
-      nextNumber = bundleNumber.get(path);
+      const currentNumber = +bundleNumber.get(path);
+      nextNumber = `${currentNumber + 1}`;
     }
     core.info(`Update to ${nextNumber}`);
     bundleNumber.update(path, nextNumber);

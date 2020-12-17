@@ -31,9 +31,10 @@
     "xcode-update-build-number": "bin/cli.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "yarn autoclean && tsc",
     "lint": "eslint src/**/*.ts src/*.ts",
-    "test": "NODE_ENV=test node --experimental-vm-modules --experimental-modules node_modules/.bin/jest --coverage --passWithNoTests"
+    "test": "NODE_ENV=test node --experimental-vm-modules --experimental-modules node_modules/.bin/jest --coverage --passWithNoTests",
+    "clean": "yarn autoclean"
   },
   "dependencies": {
     "@actions/core": "^1.2.6"
