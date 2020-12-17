@@ -28,7 +28,7 @@ describe('Update Bundle Number', () => {
     });
 
     test('should error to get.', (): void => {
-        fs.rmSync(INFO_PLIST_FILE);
+        fs.unlinkSync(INFO_PLIST_FILE);
         try {
             bundleNumber.get(INFO_PLIST_FILE);
             fail();
@@ -38,7 +38,7 @@ describe('Update Bundle Number', () => {
     });
 
     test('should error to update.', (): void => {
-        fs.rmSync(INFO_PLIST_FILE);
+        fs.unlinkSync(INFO_PLIST_FILE);
         try {
             bundleNumber.update(INFO_PLIST_FILE, '10');
             fail();

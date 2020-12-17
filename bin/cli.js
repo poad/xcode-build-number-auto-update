@@ -1,2 +1,4 @@
 #!/usr/bin/env node
-require('../dist/main.js');
+import _ from '../dist/main';
+
+main()

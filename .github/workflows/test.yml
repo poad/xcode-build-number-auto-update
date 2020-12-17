@@ -1,0 +1,71 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x]
+    
+    runs-on: macos-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Build and lint
+        run: |
+          yarn build
+          yarn lint
+
+      - name: Set Xcode version
+        run: sudo xcode-select -switch /Applications/Xcode_12.3.app/
+
+      - name: Test case 1
+        uses: ./
+        with:
+          path: ./test-project/XcodeBundleNumber/XcodeBundleNumber/Info.plist
+          new-number: ${{ github.run_number }}
+
+      - name: Test case 1 assertion
+        run: |
+          CURRENT=$(PlistBuddy -c "Print CFBundleVersion" ./test-project/XcodeBundleNumber/XcodeBundleNumber/Info.plist)
+          if [ ${CURRENT} != ${{ github.run_number }} ]; then
+            echo "Expects: ${{ github.run_number }} Actual: ${CURRENT}"
+            exit 1
+          fi
+
+      - name: Test case 2
+        uses: ./
+        with:
+          path: ./test-project/XcodeBundleNumber/XcodeBundleNumber/Info.plist
+          auto-increment: true
+
+      - name: Test case 2 assertion
+        run: |
+          EXPECTS=$(echo "${{ github.run_number }}+1" | bc)
+          CURRENT=$(PlistBuddy -c "Print CFBundleVersion" ./test-project/XcodeBundleNumber/XcodeBundleNumber/Info.plist)
+          if [ ${CURRENT} != ${EXPECTS} ]; then
+            echo "Expects: ${EXPECTS} Actual: ${CURRENT}"
+            exit 1
+          fi

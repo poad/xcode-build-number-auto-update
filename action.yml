@@ -14,9 +14,6 @@ inputs:
   auto-increment:
     description: 'auto increment build number. If new_number is specified, auto_increment cannot be set to true.'
     required: false
-  debug:
-    description: 'When logging debug level, then true'
-    default: 'false'
 runs:
   using: 'node12'
-  main: 'dist/main.js'
+  main: 'bin/cli.js'
