@@ -25,6 +25,7 @@ describe('Update Bundle Number action', () => {
     const options: cp.ExecFileSyncOptions = {
       env: process.env
     }
+    cp.execFileSync(np, [ip], options).toString()
   });
 
 
