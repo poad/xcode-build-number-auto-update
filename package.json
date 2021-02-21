@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
+    "@types/node": "^14.14.31",
     "@types/jest": "^26.0.20",
     "@typescript-eslint/eslint-plugin": "^4.15.1",
     "@typescript-eslint/parser": "^4.15.1",
@@ -21,14 +22,12 @@
     "eslint-plugin-jest": "^24.1.5",
     "eslint-plugin-prettier": "^3.3.1",
     "jest": "^26.6.3",
-    "jest-circus": "^26.6.3",
     "prettier": "^2.2.1",
     "ts-jest": "^26.5.1",
     "typescript": "^4.1.5"
   },
   "dependencies": {
-    "@actions/core": "^1.2.6",
-    "@types/node": "^12.12.6"
+    "@actions/core": "^1.2.6"
   },
   "bin": {
     "xcode-update-build-number": "bin/cli.js"
@@ -36,7 +35,7 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint src/**/*.ts src/*.ts",
-    "test": "NODE_ENV=test node --experimental-vm-modules --experimental-modules node_modules/.bin/jest --coverage --passWithNoTests",
+    "test": "NODE_ENV=test jest --passWithNoTests",
     "clean": "yarn autoclean --force"
   },
   "exports": {
