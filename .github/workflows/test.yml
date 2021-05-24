@@ -22,8 +22,8 @@ jobs:
       matrix:
         node-version: 
           - 12
-          # - 14
-          - 15
+          - 14
+          - 16
     
     runs-on: macos-latest
 
@@ -42,6 +42,7 @@ jobs:
 
       - name: Build and lint
         run: |
+          rm -rf node_modules
           yarn install
           yarn build
           yarn lint
