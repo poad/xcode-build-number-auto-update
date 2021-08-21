@@ -39,6 +39,7 @@ jobs:
         yarn build && \
         yarn test && \
         rm -rf coverage dist node_modules
+
     - name: Commit files
       run: |
         git config --local user.email "ken-yo@mbr.nifty.com"
@@ -55,6 +56,7 @@ jobs:
         echo "BRANCH_NAME=${BRANCH_NAME}" >> $GITHUB_ENV
         echo "TIMESTAMP=${TIMESTAMP}" >> $GITHUB_ENV
         echo "CHANGE_STATE=changed" >> $GITHUB_ENV
+
     - name: Push Changes
       if: success() && env.CHANGE_STATE == 'changed'
       uses: ad-m/github-push-action@master
@@ -110,7 +112,7 @@ jobs:
 
     - name: Pull request auto merge enabler
       if: success() && env.CHANGE_STATE == 'changed'
-      uses: ./
+      uses: poad/github-pull-request-auto-merge-enable-action@v1.0.0
       with:
         pull_request_id: ${{ env.PULL_REQUEST_ID }}
         github_token: ${{ secrets.PERSONAL_TOKEN_FOR_GITHUB_ACTIONS }}
