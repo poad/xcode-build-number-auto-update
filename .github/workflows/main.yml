@@ -97,7 +97,7 @@ jobs:
       if: success() && env.CHANGE_STATE == 'changed'
       uses: slackapi/slack-github-action@v1.15.0
       with:
-        payload: ${{ env.SLACKK_PAYLOAD }}
+        payload: "{\"text\":${{ env.SLACKK_PAYLOAD }}}"
       env:
         SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
         SLACKK_PAYLOAD: ${{ format('{0} {1}\nPull Request <{2}>', github.workflow, job.status, env.PULL_REQUEST_HTML_URL) }}
