@@ -79,3 +79,16 @@ jobs:
             echo "Expects: ${EXPECTS} Actual: ${CURRENT}"
             exit 1
           fi
+
+  configure:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull request auto merge enabler
+        if: github.event_name == 'pull_request' && github.actor != 'dependabot[bot]'
+        uses: poad/github-pull-request-auto-merge-enable-action@v1.0.0
+        with:
+          pull_request_id: ${{ github.event.pull_request.node_id }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.event.repository.name }}
+          owner: ${{ github.repository_owner }}
+          merge_method: SQUASH
