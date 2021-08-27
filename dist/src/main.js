@@ -24,7 +24,7 @@ function run() {
         core.setOutput("dest-number", newNumber);
     }
     catch (error) {
-        core.setFailed(error.message);
+        core.setFailed(error instanceof Error ? error.message : JSON.stringify(error));
     }
 }
 run();
