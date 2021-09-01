@@ -82,7 +82,7 @@ jobs:
 
   configure:
     runs-on: ubuntu-latest
-    if: github.actor != 'dependabot[bot]'
+    if: github.actor != 'dependabot[bot]' && github.event_name == 'pull_request'
     steps:
       - name: Pull request auto merge enabler
         uses: poad/github-pull-request-auto-merge-enable-action@v1.0.0
