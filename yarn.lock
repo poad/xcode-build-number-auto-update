@@ -428,15 +428,6 @@
     jest-mock "^27.1.1"
     jest-util "^27.2.0"
 
-"@jest/globals@^27.2.0":
-  version "27.2.0"
-  resolved "https://registry.yarnpkg.com/@jest/globals/-/globals-27.2.0.tgz#4d7085f51df5ac70c8240eb3501289676503933d"
-  integrity sha512-raqk9Gf9WC3hlBa57rmRmJfRl9hom2b+qEE/ifheMtwn5USH5VZxzrHHOZg0Zsd/qC2WJ8UtyTwHKQAnNlDMdg==
-  dependencies:
-    "@jest/environment" "^27.2.0"
-    "@jest/types" "^27.1.1"
-    expect "^27.2.0"
-
 "@jest/globals@^27.2.1":
   version "27.2.1"
   resolved "https://registry.yarnpkg.com/@jest/globals/-/globals-27.2.1.tgz#6842c70b6713fbe2fcaf89eac20d77eeeb0e282c"
@@ -1599,7 +1590,7 @@ exit@^0.1.2:
   resolved "https://registry.yarnpkg.com/exit/-/exit-0.1.2.tgz#0632638f8d877cc82107d30a0fff1a17cba1cd0c"
   integrity sha1-BjJjj42HfMghB9MKD/8aF8uhzQw=
 
-expect@^27.2.0, expect@^27.2.1:
+expect@^27.2.1:
   version "27.2.1"
   resolved "https://registry.yarnpkg.com/expect/-/expect-27.2.1.tgz#5f882b308716618613f0106a488b46c303908157"
   integrity sha512-ekOA2mBtT2phxcoPVHCXIzbJxCvRXhx2fr7m28IgGdZxUOh8UvxvoRz1FcPlfgZMpE92biHB6woIcAKXqR28hA==
@@ -2398,40 +2389,7 @@ jest-runner@^27.2.0, jest-runner@^27.2.1:
     source-map-support "^0.5.6"
     throat "^6.0.1"
 
-jest-runtime@^27.2.0:
-  version "27.2.0"
-  resolved "https://registry.yarnpkg.com/jest-runtime/-/jest-runtime-27.2.0.tgz#998295ccd80008b3031eeb5cc60e801e8551024b"
-  integrity sha512-6gRE9AVVX49hgBbWQ9PcNDeM4upMUXzTpBs0kmbrjyotyUyIJixLPsYjpeTFwAA07PVLDei1iAm2chmWycdGdQ==
-  dependencies:
-    "@jest/console" "^27.2.0"
-    "@jest/environment" "^27.2.0"
-    "@jest/fake-timers" "^27.2.0"
-    "@jest/globals" "^27.2.0"
-    "@jest/source-map" "^27.0.6"
-    "@jest/test-result" "^27.2.0"
-    "@jest/transform" "^27.2.0"
-    "@jest/types" "^27.1.1"
-    "@types/yargs" "^16.0.0"
-    chalk "^4.0.0"
-    cjs-module-lexer "^1.0.0"
-    collect-v8-coverage "^1.0.0"
-    execa "^5.0.0"
-    exit "^0.1.2"
-    glob "^7.1.3"
-    graceful-fs "^4.2.4"
-    jest-haste-map "^27.2.0"
-    jest-message-util "^27.2.0"
-    jest-mock "^27.1.1"
-    jest-regex-util "^27.0.6"
-    jest-resolve "^27.2.0"
-    jest-snapshot "^27.2.0"
-    jest-util "^27.2.0"
-    jest-validate "^27.2.0"
-    slash "^3.0.0"
-    strip-bom "^4.0.0"
-    yargs "^16.0.3"
-
-jest-runtime@^27.2.1:
+jest-runtime@^27.2.0, jest-runtime@^27.2.1:
   version "27.2.1"
   resolved "https://registry.yarnpkg.com/jest-runtime/-/jest-runtime-27.2.1.tgz#db506f679356f5b94b7be20e770f2541b7c2b339"
   integrity sha512-QJNnwL4iteDE/Jq4TfQK7AjhPoUZflBKTtUIkRnFYFkTAZTP/o8k7ekaROiVjmo+NYop5+DQPqX6pz4vWbZSOQ==
