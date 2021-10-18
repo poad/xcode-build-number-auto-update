@@ -1642,7 +1642,7 @@ exit@^0.1.2:
   resolved "https://registry.yarnpkg.com/exit/-/exit-0.1.2.tgz#0632638f8d877cc82107d30a0fff1a17cba1cd0c"
   integrity sha1-BjJjj42HfMghB9MKD/8aF8uhzQw=
 
-expect@^27.3.0:
+expect@^27.2.5, expect@^27.3.0:
   version "27.3.0"
   resolved "https://registry.yarnpkg.com/expect/-/expect-27.3.0.tgz#6cf2864a2553fe8ea68e19a6ce1641b08c3a5a98"
   integrity sha512-JBRU82EBkZUBqLBAoF3ovzNGEBm14QQnePK4PmZdm6de6q/UzPnmIuWP3dRCw/FE8wRQhf/1eKzy1p1q8d6EvQ==
@@ -2170,9 +2170,9 @@ istanbul-reports@^3.0.2:
     istanbul-lib-report "^3.0.0"
 
 jest-changed-files@^27.2.5:
-  version "27.2.5"
-  resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-27.2.5.tgz#9dfd550d158260bcb6fa80aff491f5647f7daeca"
-  integrity sha512-jfnNJzF89csUKRPKJ4MwZ1SH27wTmX2xiAIHUHrsb/OYd9Jbo4/SXxJ17/nnx6RIifpthk3Y+LEeOk+/dDeGdw==
+  version "27.3.0"
+  resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-27.3.0.tgz#22a02cc2b34583fc66e443171dc271c0529d263c"
+  integrity sha512-9DJs9garMHv4RhylUMZgbdCJ3+jHSkpL9aaVKp13xtXAD80qLTLrqcDZL1PHA9dYA0bCI86Nv2BhkLpLhrBcPg==
   dependencies:
     "@jest/types" "^27.2.5"
     execa "^5.0.0"
@@ -2368,7 +2368,7 @@ jest-leak-detector@^27.3.0:
     jest-get-type "^27.0.6"
     pretty-format "^27.3.0"
 
-jest-matcher-utils@^27.3.0:
+jest-matcher-utils@^27.2.5, jest-matcher-utils@^27.3.0:
   version "27.3.0"
   resolved "https://registry.yarnpkg.com/jest-matcher-utils/-/jest-matcher-utils-27.3.0.tgz#82c41750db4384d7a8db319348752df2bb0acf7a"
   integrity sha512-AK2ds5J29PJcZhfJ/5J8ycbjCXTHnwc6lQeOV1a1GahU1MCpSvyHG1iIevyvp6PXPy6r0q9ywGdCObWHmkK16g==
@@ -2559,16 +2559,16 @@ jest-validate@^27.2.5, jest-validate@^27.3.0:
     pretty-format "^27.3.0"
 
 jest-watcher@^27.2.5:
-  version "27.2.5"
-  resolved "https://registry.yarnpkg.com/jest-watcher/-/jest-watcher-27.2.5.tgz#41cd3e64dc5bea8a4327083d71ba7667be400567"
-  integrity sha512-umV4qGozg2Dn6DTTtqAh9puPw+DGLK9AQas7+mWjiK8t0fWMpxKg8ZXReZw7L4C88DqorsGUiDgwHNZ+jkVrkQ==
+  version "27.3.0"
+  resolved "https://registry.yarnpkg.com/jest-watcher/-/jest-watcher-27.3.0.tgz#13730b347e2ae8ba3c9435055bdad2ad73e5c348"
+  integrity sha512-xpTFRhqzUnNwTGaSBoHcyXROGbAfj2u4LS7Xosb+hzgrFgWgiHtCy3PWyN1DQk31Na98bBjXKxAbfSBACrvEiQ==
   dependencies:
-    "@jest/test-result" "^27.2.5"
+    "@jest/test-result" "^27.3.0"
     "@jest/types" "^27.2.5"
     "@types/node" "*"
     ansi-escapes "^4.2.1"
     chalk "^4.0.0"
-    jest-util "^27.2.5"
+    jest-util "^27.3.0"
     string-length "^4.0.1"
 
 jest-worker@^27.2.5, jest-worker@^27.3.0:
