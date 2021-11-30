@@ -2121,11 +2121,11 @@ istanbul-reports@^3.0.2:
     istanbul-lib-report "^3.0.0"
 
 jest-changed-files@^27.4.1:
-  version "27.4.1"
-  resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-27.4.1.tgz#a74527d4fe1690f3390173a650b988ca5ac6f533"
-  integrity sha512-tjbk3DJkgiFDlwYJDcAdFlfGaEYgIV8McSwXzwN221wohFYkC85XPkLqXaAswVGgzHyCNima+eniLVTir+4QBg==
+  version "27.4.2"
+  resolved "https://registry.yarnpkg.com/jest-changed-files/-/jest-changed-files-27.4.2.tgz#da2547ea47c6e6a5f6ed336151bd2075736eb4a5"
+  integrity sha512-/9x8MjekuzUQoPjDHbBiXbNEBauhrPU2ct7m8TfCg69ywt1y/N+yYwGh3gCpnqUS3klYWDU/lSNgv+JhoD2k1A==
   dependencies:
-    "@jest/types" "^27.4.1"
+    "@jest/types" "^27.4.2"
     execa "^5.0.0"
     throat "^6.0.1"
 
