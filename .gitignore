@@ -105,3 +105,5 @@ typings/
 !node_modules/.yarn-integrity
 !node_modules/@actions
 .yarn-integrity
+
+.DS_Store
