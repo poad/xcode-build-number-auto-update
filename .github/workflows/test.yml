@@ -21,7 +21,6 @@ jobs:
     strategy:
       matrix:
         node-version: 
-          - 12
           - 14
           - 16
     
@@ -45,11 +44,12 @@ jobs:
           rm -rf node_modules
           yarn install
           yarn build
+          yarn package
           yarn lint
           yarn test
 
       - name: Set Xcode version
-        run: sudo xcode-select -s "/Applications/Xcode_12.5.1.app"
+        run: sudo xcode-select -s "/Applications/Xcode_13.2.1.app"
       
       - name: Test case 1
         uses: ./

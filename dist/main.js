@@ -1,8 +1,5 @@
-"use strict";
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const core = require("@actions/core");
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const bundleNumber = require("./bundleNumber");
+import core from "@actions/core";
+import * as bundleNumber from "./bundleNumber.js";
 function run() {
     try {
         const path = core.getInput("path");
@@ -24,7 +21,7 @@ function run() {
         core.setOutput("dest-number", newNumber);
     }
     catch (error) {
-        core.setFailed(error.message);
+        core.setFailed(error instanceof Error ? error.message : JSON.stringify(error));
     }
 }
 run();
