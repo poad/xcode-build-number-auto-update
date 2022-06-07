@@ -1,7 +1,13 @@
 import * as fs from 'fs';
 import * as process from 'process'
 import * as cp from 'child_process'
-import * as path from 'path'
+import * as path from 'path';
+import {
+  describe, beforeEach, afterAll, expect, test,
+} from '@jest/globals';
+import { fileURLToPath } from 'url';
+
+const dirname = path.dirname(fileURLToPath(import.meta.url));
 
 describe('Update Bundle Number action', () => {
   const SOURCE_INFO_PLIST_FILE = './test-project/XcodeBundleNumber/XcodeBundleNumber/Info.plist';
@@ -21,7 +27,7 @@ describe('Update Bundle Number action', () => {
     process.env['INPUT_PATH'] = INFO_PLIST_FILE
     process.env['INPUT_NEW-NUMBER'] = '5'
     const np = process.execPath
-    const ip = path.join(__dirname, '..', 'dist', 'main.js')
+    const ip = path.join(dirname, '..', 'dist', 'main.js')
     const options: cp.ExecFileSyncOptions = {
       env: process.env
     }

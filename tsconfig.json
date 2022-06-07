@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "target": "es2019",
+    "target": "esnext",
     "module": "esnext",
     "lib": [
-      "es2019",
+      "esnext",
       "dom"
     ],
     "outDir": "./dist",
-    "rootDir": ".",
+    "rootDir": "./src",
     "moduleResolution": "node",
     "typeRoots": [
       "node_modules/@types"

@@ -1,6 +1,9 @@
-import { fstat } from "fs";
 import * as bundleNumber from "../src/bundleNumber";
 import * as fs from 'fs';
+import {
+    describe, beforeEach, afterAll, expect, test,
+} from '@jest/globals';
+import { fail } from "assert";
 
 describe('Update Bundle Number', () => {
     const SOURCE_INFO_PLIST_FILE = './test-project/XcodeBundleNumber/XcodeBundleNumber/Info.plist';
