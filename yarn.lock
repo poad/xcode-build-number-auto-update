@@ -170,12 +170,7 @@
     chalk "^2.0.0"
     js-tokens "^4.0.0"
 
-"@babel/parser@^7.1.0":
-  version "7.19.4"
-  resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.19.4.tgz#03c4339d2b8971eb3beca5252bafd9b9f79db3dc"
-  integrity sha512-qpVT7gtuOLjWeDTKLkJ6sryqLliBaFpAtGeqw5cs5giLldvh+Ch0plqnUMKoVAUS6ZEueQQiZV+p5pxtPitEsA==
-
-"@babel/parser@^7.14.7", "@babel/parser@^7.18.10", "@babel/parser@^7.19.6":
+"@babel/parser@^7.1.0", "@babel/parser@^7.14.7", "@babel/parser@^7.18.10", "@babel/parser@^7.19.6":
   version "7.19.6"
   resolved "https://registry.yarnpkg.com/@babel/parser/-/parser-7.19.6.tgz#b923430cb94f58a7eae8facbffa9efd19130e7f8"
   integrity sha512-h1IUp81s2JYJ3mRkdxJgs4UvmSsRvDrx5ICSJbPvtWYv5i1nTBGcBpnog+89rAFMwvvru6E5NUHdBe01UeSzYA==
@@ -953,11 +948,11 @@ array.prototype.flat@^1.2.5:
     es-shim-unscopables "^1.0.0"
 
 babel-jest@^29.2.1:
-  version "29.2.1"
-  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-29.2.1.tgz#213c47e28072de11bdb98c9d29b89f2ab99664f1"
-  integrity sha512-gQJwArok0mqoREiCYhXKWOgUhElJj9DpnssW6GL8dG7ARYqHEhrM9fmPHTjdqEGRVXZAd6+imo3/Vwa8TjLcsw==
+  version "29.2.2"
+  resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-29.2.2.tgz#2c15abd8c2081293c9c3f4f80a4ed1d51542fee5"
+  integrity sha512-kkq2QSDIuvpgfoac3WZ1OOcHsQQDU5xYk2Ql7tLdJ8BVAYbefEXal+NfS45Y5LVZA7cxC8KYcQMObpCt1J025w==
   dependencies:
-    "@jest/transform" "^29.2.1"
+    "@jest/transform" "^29.2.2"
     "@types/babel__core" "^7.1.14"
     babel-plugin-istanbul "^6.1.1"
     babel-preset-jest "^29.2.0"
