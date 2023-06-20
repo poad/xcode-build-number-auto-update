@@ -1,0 +1,38 @@
+{
+  "jest": {
+    "preset": "ts-jest/presets/default-esm",
+    "clearMocks": true,
+    "moduleFileExtensions": [
+      "ts",
+      "js",
+      "json",
+      "node"
+    ],
+    "testMatch": [
+      "**/tests/*.test.ts"
+    ],
+    "transform": {
+      "^.+\\.m?(t|j)sx?$": [
+        "ts-jest",
+        {
+          "useESM": true
+        }
+      ]
+    },
+    "extensionsToTreatAsEsm": [
+      ".ts"
+    ],
+    "modulePaths": [
+      "<rootDir>/src",
+      "<rootDir>/dist",
+      "<rootDir>/node_modules"
+    ],
+    "globals": {
+      "ts-jest": {
+        "useESM": true,
+        "tsconfig": "tsconfig.json"
+      }
+    },
+    "verbose": true
+  }
+}
