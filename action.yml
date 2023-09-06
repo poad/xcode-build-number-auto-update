@@ -15,5 +15,5 @@ inputs:
     description: 'auto increment build number. If new_number is specified, auto_increment cannot be set to true.'
     required: false
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
