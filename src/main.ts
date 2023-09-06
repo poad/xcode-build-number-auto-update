@@ -11,7 +11,7 @@ function run(): void {
     if (autoIncrement !== "true") {
       if (newNumber === undefined) {
         throw new Error(
-          "Unless you specify true for auto-increment, new-number must be specified!"
+          "Unless you specify true for auto-increment, new-number must be specified!",
         );
       }
       nextNumber = newNumber;
@@ -25,7 +25,7 @@ function run(): void {
     core.setOutput("dest-number", newNumber);
   } catch (error) {
     core.setFailed(
-      error instanceof Error ? error.message : JSON.stringify(error)
+      error instanceof Error ? error.message : JSON.stringify(error),
     );
   }
 }

@@ -13,7 +13,7 @@ export const get = (infoPlistFile: string): string => {
         stdio: ["pipe", "pipe", "pipe"],
         env: { ...process.env },
         shell: "zsh",
-      }
+      },
     )
     .stdout.toString("utf-8")
     .trim();
@@ -30,6 +30,6 @@ export const update = (infoPlistFile: string, bundleNumber: string): void => {
       stdio: ["ignore", "inherit", "inherit"],
       env: { ...process.env },
       shell: "zsh",
-    }
+    },
   );
 };
